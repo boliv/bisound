@@ -1,4 +1,4 @@
-var streamingController = function () {
+var musicController = function () {
   var get = function (req,res) {
     var responseJson = {
       jay: "http://listen.radionomy.com/abc-lounge",
@@ -16,4 +16,4 @@ var streamingController = function () {
   };
 };
 
-module.exports = streamingController;
+module.exports = musicController;
