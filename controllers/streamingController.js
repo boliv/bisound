@@ -1,4 +1,4 @@
-var musicController = function () {
+var streamingController = function () {
   var get = function (req,res) {
     var responseJson = {
       sync_url: "http://someurl.com"
@@ -12,4 +12,4 @@ var musicController = function () {
   };
 };
 
-module.exports = musicController;
+module.exports = streamingController;

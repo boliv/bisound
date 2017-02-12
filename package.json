@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.16.1",
+    "child-process": "^1.0.2",
     "express": "^4.14.1",
     "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1"
+    "gulp-nodemon": "^2.2.1",
+    "socketio": "^1.0.0"
   }
 }
