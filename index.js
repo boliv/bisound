@@ -8,6 +8,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var ms = require('mediaserver');
+
 var fs = require('fs');
 
 var port = process.env.PORT || 3000;
@@ -18,6 +20,15 @@ app.use(bodyParser.json());
 streamingRouter = require('./routes/streamingRoutes')();
 
 app.use('/api/streaming', streamingRouter);
+
+app.get('/streams/kauna', function(req, res) {
+
+  // http.createServer(function (req, res) {
+
+    ms.pipe(req, res, "music/brave_new_world_side_1.mp3");
+
+  // });
+});
 
 
 app.get('/test', function(req, res) {
