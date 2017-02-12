@@ -11,7 +11,7 @@ var io = require('socket.io')(http);
 var ms = require('mediaserver');
 
 var fs = require('fs');
- 
+
 var port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -30,7 +30,7 @@ app.get('/streams/kauna', function(req, res) {
   // });
 });
 
- 
+
 app.get('/test', function(req, res) {
 
 	res.sendFile(__dirname + '/index.html');
@@ -39,7 +39,8 @@ app.get('/test', function(req, res) {
 app.get('/', function(req, res) {
   res.send('Welcome to my Bi-Sound API');
 });
- 
+
+
 app.listen(port, function() {
   console.log('Running on PORT: ' + port);
 });
