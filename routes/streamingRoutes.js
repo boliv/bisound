@@ -8,6 +8,7 @@ var routes = function () {
   streamingRouter.route('/')
     .get(streamingController.get);
 
+
   return streamingRouter;
 };
 
