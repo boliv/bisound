@@ -1,6 +1,9 @@
 var streamingController = function () {
   var get = function (req,res) {
-    var name =req.query.name;
+    var name;
+    if(req.query.name){
+        name = req.query.name;
+    }
 
     var responseJson = {
       jay: "http://listen.radionomy.com/abc-lounge",
@@ -13,7 +16,7 @@ var streamingController = function () {
     if(name!==undefined){
       res.json(responseJson[name]);
     }else{
-      res.json(responseJson[defaultStream]);
+      res.json(responseJson['defaultStream']);
     }
   };
 
